@@ -135,6 +135,29 @@
   color: #4b5563;
   background: #f3f4f6;
 }
+.task-card {
+  cursor: grab;
+  touch-action: none;
+}
+
+.task-card:active {
+  cursor: grabbing;
+}
+
+.task-card-dragging {
+  box-shadow: 0 12px 30px rgb(0 0 0 / 18%);
+}
+
+.column {
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.column-over {
+  border-color: #6366f1;
+  background: #eef2ff;
+}
 @media (max-width: 800px) {
   .app {
     padding: 24px;
