@@ -1,16 +1,54 @@
-# React + Vite
+# NextPlay Board
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+NextPlay Board is a responsive Kanban-style task management application built with React, Supabase, and dnd-kit.
 
-Currently, two official plugins are available:
+Users can create tasks, organize them across four workflow stages, and drag tasks between columns. Tasks are stored in Supabase and remain available after refreshing the page. Anonymous authentication and Row Level Security ensure that each guest user can only access their own tasks.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Live Demo
 
-## React Compiler
+[Open the live application](https://nextplay-task-board-jq8bk5qqk-sathinis-projects.vercel.app/)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+- Four-column Kanban board
+- Create tasks with a title, description, priority, and due date
+- Drag-and-drop task movement
+- Persistent task storage with Supabase
+- Automatic anonymous guest authentication
+- Row Level Security for private user data
+- Loading and error states
+- Responsive layout
+- Priority badges and due-date display
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Technology
+
+- React
+- Vite
+- JavaScript
+- Supabase
+- dnd-kit
+- CSS
+- Vercel
+- GitHub
+
+## Database
+
+The application uses a Supabase `tasks` table with the following fields:
+
+- `id`
+- `title`
+- `description`
+- `status`
+- `priority`
+- `due_date`
+- `user_id`
+- `created_at`
+
+Row Level Security policies ensure that users can only create, view, update, and delete tasks associated with their own user ID.
+
+## Run Locally
+
+Clone the repository:
+
+```bash
+git clone https://github.com/sathinisen/nextplay-task-board
